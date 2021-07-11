@@ -16,7 +16,8 @@ pipeline {
 //         }
         stage ('Run new version Stage') {
             steps {
-               sh 'java -jar target/helloWorld-*-shaded.jar'
+                sh 'tmux new -s test'
+                sh 'java -jar Documents/Dev/HelloWorld/target/helloWorld-*-shaded.jar'
             }
         }
     }
