@@ -9,11 +9,11 @@ pipeline {
                 }
             }
         }
-        stage ('Kill process on 7000 Stage') {
-            steps {
-                sh 'kill -9 $(lsof -t -i:7000)'
-            }
-        }
+//         stage ('Kill process on 7000 Stage') {
+//             steps {
+//                 sh 'kill -9 $(lsof -t -i:7000)'
+//             }
+//         }
         stage ('Run new version Stage') {
             steps {
                sh 'java -jar target/helloWorld-*-shaded.jar'
